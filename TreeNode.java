@@ -18,8 +18,16 @@ public class TreeNode {
     @Override
     public String toString() {
         String val = "[";
+        val += traverseTreeNode(this) + "]";
+        return val;
+    }
+
+    public String traverseTreeNode(TreeNode node) {
+        if (node == null)
+            return " null ";
+        
+        String val = " " + node.val + " " + traverseTreeNode(node.left) + " " + traverseTreeNode(node.right) + " ";
 
         return val;
     }
-    
 } 
